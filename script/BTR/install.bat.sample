@@ -1,0 +1,16 @@
+@ECHO OFF
+REM Assign values which correspond to your system configuration
+REM to script variables below. Avoid placing space between "=" and a value.
+REM It is recommended to create and use independent database solely for purposes of BTR
+REM Any tables or stored procedures with the same names as used by BTR will be dropped
+set ISQLDIR=E:\Program Files\Microsoft SQL Server\80\Tools\Binn\
+set SRV=server\instance
+set DB=Northwind
+set PWD=sapwd
+
+REM Do not edit anything further.
+call .\make_script.bat
+set USR=sa
+set ISQL="%ISQLDIR%isqlw"
+%ISQL% -S %SRV% -d %DB% -U %USR% -P %PWD% -i .\btr_script.sql -o .\install.out
+type .\install.out

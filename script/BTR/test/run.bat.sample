@@ -1,0 +1,11 @@
+set ISQLDIR=E:\"Program Files"\"Microsoft SQL Server"\80\Tools\Binn\
+set ISQL=%ISQLDIR%isqlw.exe
+set SRV=srv\instance
+set USR=sa
+set DB=Northwind
+set PWD=sapwd
+start cmd /c "%ISQL% -S %SRV% -d %DB% -U %USR% -P %PWD% -i .\BTRStart.sql -o .\BTRStart.out > _BTRStart.out 2>_BTRStart.err"
+start cmd /c "%ISQL% -S %SRV% -d %DB% -U %USR% -P %PWD% -i .\P1.sql  -o .\P1.out"
+start cmd /c "%ISQL% -S %SRV% -d %DB% -U %USR% -P %PWD% -i .\P2.sql  -o .\P2.out"
+start cmd /c "%ISQL% -S %SRV% -d %DB% -U %USR% -P %PWD% -i .\P3.sql  -o .\P3.out"
+start cmd /c "%ISQL% -S %SRV% -d %DB% -U %USR% -P %PWD% -i .\BTRStop.sql  -o .\BTRStop.out"

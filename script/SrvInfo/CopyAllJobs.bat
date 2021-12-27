@@ -1,0 +1,1 @@
+cscript "CopyAllJobs, job steps and job schedules.vbs" > CopyAllJobs.sql

@@ -1,0 +1,9 @@
+For SQL Server 7.0 download XPSMTP70.ZIP and unzip the files
+For SQL Server 2000, download XPSMTP80.ZIP and unzip the files
+Copy xpsmtpXX.dll into the SQL Server BINN directory
+-- SQL Server 7.0 install
+exec sp_addextendedproc 'xp_smtp_sendmail', 'xpsmtp70.dll'
+-- SQL Server 2000 install
+exec sp_addextendedproc 'xp_smtp_sendmail', 'xpsmtp80.dll'
+-- grant execute on xp_smtp_sendmail to public
+By default only the member of the sysadmin role have execution rights on the XP after it is being registered
