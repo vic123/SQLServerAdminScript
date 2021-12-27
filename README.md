@@ -1,5 +1,5 @@
 # SQLServerAdminScript - imported from discontinued codeplex.com.
-Code and readme oontents below are very old, dated by around 2005. Project did not evolve beyond initial commit.
+Code and readme content below are very old, dated by around 2005. Project did not evolve beyond initial commit.
 
 ## **Project Description**
 Collection of T-SQL (mostly) scripts with centralized logging and emailing allowing quick configuration of backup, free space control, operations with files, custom log shipping, audit, lock tracing.
